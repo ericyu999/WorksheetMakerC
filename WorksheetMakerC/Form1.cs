@@ -29,16 +29,16 @@ namespace WorksheetMakerC
             Excel.Application tXL;
             Excel._Workbook sWB, tWB;
             Excel._Worksheet tSheet;
-            
 
+            
             
             if (textBoxSrcPath.Text == string.Empty || textBoxFolderPath.Text == string.Empty)
             {
                 MessageBox.Show("Please choose source file and folder to save output files.");
                 return;
             }
-            
-            
+
+            button1.Enabled = false;
             try
             {
 
@@ -126,6 +126,7 @@ namespace WorksheetMakerC
                 tXL.Quit();
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(sWB);
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(tXL);
+                button1.Enabled = true;
             }
             catch (Exception theException)
             {
@@ -237,6 +238,8 @@ namespace WorksheetMakerC
             else
                 m_strFolderPath = string.Empty;
         }
+
+        
     }
     
 }

@@ -43,6 +43,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(90, 254);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 42);
@@ -118,7 +119,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "WorksheetMaker";
+            this.Text = "WorksheetMaker";                       
             this.ResumeLayout(false);
             this.PerformLayout();
 
